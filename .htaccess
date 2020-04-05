@@ -1,0 +1,5 @@
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^supprogram.azurewebsites.net$ [NC,OR]
+RewriteCond %{HTTP_HOST} ^www.supprogram.azurewebsites.net/$
+RewriteCond %{REQUEST_URI} !_controlador/
+RewriteRule (.*) /_controlador/$1 [L]
